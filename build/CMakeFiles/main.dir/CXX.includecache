@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/data/old_home/code-exercise/cmake_template_git_version/main.cc
+iostream
+-
+version.hh
+/mnt/data/old_home/code-exercise/cmake_template_git_version/version.hh
+
+/mnt/data/old_home/code-exercise/cmake_template_git_version/version.hh
+string
+-
+
