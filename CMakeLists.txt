@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
-
+# add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
 project(code03)
 
 # 添加自定义cmake文件目录
@@ -7,6 +7,8 @@ project(code03)
 
 # 使用Utility.cmake
 # include(Utility)
+
+include_directories(include)
 
 find_package(Git QUIET)
 if(GIT_FOUND)
@@ -37,11 +39,11 @@ if(GIT_FOUND)
 endif()
 
 configure_file(
-  ${CMAKE_CURRENT_SOURCE_DIR}/version.cc.in
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/version.cc.in
   ${CMAKE_CURRENT_BINARY_DIR}/version.cc
   @ONLY
   )
 
-set(SOURCES main.cc version.cc)
+set(SOURCES main.cpp ${CMAKE_CURRENT_BINARY_DIR}/version.cc)
 
 add_executable(main ${SOURCES})

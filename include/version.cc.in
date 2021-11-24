@@ -1,0 +1,7 @@
+#include "version.hh"
+
+using namespace my_app;
+
+const std::string Version::GIT_HASH = "@GIT_HASH@";
+const std::string Version::GIT_BRANCH = "@GIT_BRANCH@";
+const std::string Version::GIT_DATE = "@GIT_DATE@";
